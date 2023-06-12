@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import React from 'react';
+
+import { AboutUs, Footer, Header, Mission, Programs } from './container';
+import { Navbar } from './components';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+/*  Home page order of each containter */
+const App = () => (
+  <div>
+    <Navbar />
+    <Header />
+    <Mission />
+    <Programs />
+    <AboutUs />
+    <Footer />
+  </div>
+);
 
 export default App;
+
+// DROP Down
+// const options = ['Option 1', 'Option 2', 'Option 3'];
+
+// return (
+//   <div>
+//     <Dropdown options={options} onChange={(option) => {
+//       console.log(option);
+//     }} />
+//   </div>
+// );
+// };

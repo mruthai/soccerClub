@@ -1,0 +1,67 @@
+.app__programs {
+    position: relative;
+    flex-direction: column;
+}
+.headtext__playfair.program-title {
+    padding-bottom: 4rem;
+
+}
+
+.app__programs-content {
+    width: 100%;
+}
+#programs {
+    background-color: var(--color-gray);
+}
+
+.app__programs-button {
+    margin: 2rem 0;
+}
+
+.subheadtext__playfair {
+    color: var(--color-black);
+}
+.p__program-content {
+    font-family: var(--font-alt);
+    color: var(--color-white);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    /* text-transform: capitalize; */
+    line-height: 28px;
+    font-size: 16px;
+  }
+
+.app__programs-content_rec {
+    padding-right: 1rem;
+}
+.app__programs-content_competitive {
+    padding-left: 2rem;
+    margin-right: 2rem;
+}
+
+
+
+/* 
+responsive display
+*/
+
+
+@media screen and (min-width: 2000px) {
+   
+    .app__programs-content_rec p,
+    .app__aboutus-content_competitive p {
+        margin: 4rem 0;
+    }
+}
+@media screen and (max-width: 900px) {
+    .app__programs-content {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .app__aboutus-overlay img {
+        width: 80%;
+        height: 320px;
+    }
+}

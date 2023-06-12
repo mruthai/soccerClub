@@ -1,0 +1,86 @@
+.app__mission-content {
+    position: relative;
+    
+
+}
+.app__mission-content {
+    width: 100%;
+    height: 20rem;
+    z-index:2;
+    
+}
+
+.app__mission-content_central {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+}
+
+@media screen and (min-width: 2000px) {
+    .p__playfair {
+      font-size: 37px;
+      line-height: 67px;
+    }
+  
+    .p__opensans {
+      font-size: 30px;
+      line-height: 50px;
+    }
+  
+    .headtext__playfair {
+      font-size: 150px;
+      line-height: 210px;
+    }
+  
+    .pitch__img {
+      width: 80px;
+    }
+  }
+  
+  @media screen and (max-width: 1150px) {
+    .app__wrapper {
+      flex-direction: column;
+    }
+  
+
+  }
+  
+  @media screen and (max-width: 850px) {
+    .section__padding {
+      padding: 4rem;
+    }
+  }
+  
+  @media screen and (max-width: 650px) {
+    .section__padding {
+      padding: 4rem 2rem;
+    }
+    
+    .p__playfair {
+      font-size: 21px;
+    }
+  
+    .p__opensans {
+      font-size: 14px;
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    .p__opensans {
+      font-size: 12px;
+    }
+  
+    .p__playfair {
+      font-size: 19px;
+    }
+  
+    .headtext__playfair {
+      font-size: 45px;
+      line-height: 70px;
+    }
+  }
+  
