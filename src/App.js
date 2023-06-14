@@ -1,21 +1,37 @@
+import './App.css';
 import React from 'react';
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AboutUs, Footer, Header, Mission, Programs } from './container';
 import { Navbar } from './components';
-import './App.css';
+import Home from './views/Home'
+import ProgramCategory from './views/ProgramCategory/ProgramCategory';
 
-/*  Home page order of each containter */
-const App = () => (
-  <div>
-    <Navbar />
-    <Header />
-    <Mission />
-    <Programs />
-    <AboutUs />
-    <Footer />
-  </div>
-);
 
+
+const App = () => {
+
+  return (
+
+    <BrowserRouter>
+      {/* <div>
+        <Navbar />
+      </div>
+      <div>
+        <Header />
+        <Mission />
+        <Programs />
+        <AboutUs />
+        <Footer />
+      </div> */}
+      <Home />
+      <Routes>
+        <Route path="/" component={<Home />} />
+        <Route path="/programs" component={<ProgramCategory />} />
+      </Routes>
+    </BrowserRouter>
+
+  );
+}
 export default App;
 
 // DROP Down

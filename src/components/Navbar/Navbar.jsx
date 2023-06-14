@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineSportsSoccer } from "react-icons/md";
-
+import { Link } from "react-router-dom"
 import images from "../../constants/images";
 
 import "./Navbar.css";
@@ -9,16 +9,21 @@ import "./Navbar.css";
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false)
 
+  function handleClick(event) {
+    event.preventDefault();
+    // Handle navigation manually using React Router or other means
+  }
+
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
         <img src={images.logo} alt="app logo" />
       </div>
       <ul className="app__navbar-links">
-        <li className="p__opensans"><a href="#home" title="home"> </a>Home</li>
-        <li className="p__opensans"><a href="#about" title="about"> </a>About</li>
-        <li className="p__opensans"><a href="#programs" title="menu"> </a>Programs</li>
-        <li className="p__opensans"><a href="#contact" title="contact"> </a>Contact</li>
+        <li className="p__opensans"> <Link to="/"> Home </Link> </li>
+        <li className="p__opensans"> <Link onClick={handleClick} to="/#about"> About </Link> </li>
+        <li className="p__opensans"> <Link to="./views/ProgramCategory/ProgramCategory"> </Link> Programs</li> 
+        <li className="p__opensans"> <a href="#contact" title="contact"> </a> Contact</li>
       </ul>
       <div className="app__navbar-login">
         <a href="#login" className="p__opensans" title="log in">Log in</a>
