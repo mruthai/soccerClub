@@ -1,47 +1,26 @@
 import './App.css';
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { AboutUs, Footer, Header, Mission, Programs } from './container';
-import { Navbar } from './components';
+import { Routes, Route } from 'react-router-dom';
 import Home from './views/Home'
-import ProgramCategory from './views/ProgramCategory/ProgramCategory';
+import Program from './views/Program/Program';
+import Resources from './views/Resources/Resources';
 
 
 
 const App = () => {
-
+  
   return (
 
-    <BrowserRouter>
-      {/* <div>
-        <Navbar />
-      </div>
-      <div>
-        <Header />
-        <Mission />
-        <Programs />
-        <AboutUs />
-        <Footer />
-      </div> */}
-      <Home />
-      <Routes>
-        <Route path="/" component={<Home />} />
-        <Route path="/programs" component={<ProgramCategory />} />
-      </Routes>
-    </BrowserRouter>
+    
 
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/programs" element={<Program />} />
+        <Route path="/resources" element={<Resources />} />
+      </Routes>
+      
   );
 }
 export default App;
 
-// DROP Down
-// const options = ['Option 1', 'Option 2', 'Option 3'];
-
-// return (
-//   <div>
-//     <Dropdown options={options} onChange={(option) => {
-//       console.log(option);
-//     }} />
-//   </div>
-// );
-// };

@@ -1,6 +1,6 @@
-import { Navbar} from "../components"
-import { Header, AboutUs, Mission, Programs, Footer } from "../container"
 
+import { Header, AboutUs, Mission, Programs, Footer } from "../container"
+import { Navbar } from "../components"
 export default function Home() {
     
     return (

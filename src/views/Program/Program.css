@@ -1,27 +1,27 @@
-.app__programs {
+.app__program {
     position: relative;
     flex-direction: column;
 }
-.headtext__playfair.program-title {
+.headtext__playfair.text__program {
     padding-bottom: 4rem;
 
 }
 
-.app__programs-content {
+.app__program-content {
     width: 100%;
 }
-#programs {
+#program {
     background-color: var(--color-gray);
 }
 
-.app__programs-button {
+.app__program-button {
     margin: 2rem 0;
 }
 
 .subheadtext__playfair {
     color: var(--color-black);
 }
-.p__programs-content {
+.p__program-content {
     font-family: var(--font-alt);
     color: var(--color-white);
     font-weight: 400;
@@ -31,10 +31,10 @@
     font-size: 16px;
   }
 
-.app__programs-content_rec {
+.app__program-content_rec {
     padding-right: 1rem;
 }
-.app__programs-content_competitive {
+.app__program-content_competitive {
     padding-left: 2rem;
     margin-right: 2rem;
 }
@@ -48,19 +48,19 @@ responsive display
 
 @media screen and (min-width: 2000px) {
    
-    .app__programs-content_rec p,
-    .app__programs-content_competitive p {
+    .app__program-content_rec p,
+    .app__program-content_competitive p {
         margin: 4rem 0;
     }
 }
 @media screen and (max-width: 900px) {
-    .app__programs-content {
+    .app__program-content {
         flex-direction: column;
     }
 }
 
 @media screen and (max-width: 650px) {
-    .app__programs-overlay img {
+    .app__program-overlay img {
         width: 80%;
         height: 320px;
     }
