@@ -8,9 +8,9 @@ const Footer = () => (
     <div className="app__footer-links">
       <div className="app__footer-links_contact">
           <h1 className="app__footer-headtext">Contact Us</h1>
-          <p className="p__opensans">Address</p>
-          <p className="p__opensans"> Number</p>
-          <p className="p__opensans">email</p>
+          <p className="p__opensans">Address: 123 Main St. Ridgewell</p>
+          <p className="p__opensans"> Number: 123-123-4567</p>
+          <p className="p__opensans">email: contact@rigdewell.united</p>
       </div>
       <div className="app__footer-links_logo">
         <img src={ images.logo } alt="footer-logo" />

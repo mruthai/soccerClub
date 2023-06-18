@@ -1,6 +1,7 @@
 .app__mission-content {
     position: relative;
     
+    
 
 }
 .app__mission-content {
@@ -10,12 +11,17 @@
     
 }
 
+.p__mission {
+  margin: 2rem;
+}
+
 .app__mission-content_central {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
 
     text-align: center;
 }

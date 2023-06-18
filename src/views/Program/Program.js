@@ -1,6 +1,7 @@
 
 import './Program.css'
 import Navbar from '../../components/Navbar/Navbar'
+import Footer from '../../container/Footer/Footer'
 import { images } from '../../constants'
 
 const Program = () => {
@@ -48,6 +49,7 @@ const Program = () => {
         </div>
 
       </div>
+      <Footer />
     </div>
   )
 }
