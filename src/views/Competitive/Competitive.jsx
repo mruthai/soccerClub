@@ -1,15 +1,16 @@
-import React from 'react';
-import Competitive from './Competitive.css'
+import React from 'react'
+import './Competitive.css'
+
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../container/Footer/Footer'
 
 
-
-const Competitive = () => (
-  <div>
+const Competitive = () => {
+  return (
+    <div>
     <Navbar />
-    <div className="app__header app__wrapper section__padding" id="competitive">
-      <div className="app__wrapper_info">
+    <div className="app__competitive app__wrapper section__padding" id="competitive">
+      <div className="app__competitive-content">
         <h1>Competitive</h1>
       </div>
       <div className="app__wrapper_img">
@@ -18,6 +19,7 @@ const Competitive = () => (
       <Footer />
     </div>
   </div>
-);
+  )
+}
 
-export default Competitive;
+export default Competitive

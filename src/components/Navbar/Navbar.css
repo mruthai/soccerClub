@@ -23,11 +23,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     list-style: none;
 }
 
-.app__navbar-links li {
+.app__navbar-links li  {
     margin: 0 1rem;
     cursor: pointer;
 }
@@ -35,6 +34,81 @@
 .app__navbar-links li:hover {
     color: var(--color-grey)
 }
+/* 
+dropdwon menu
+*/
+/* .app__navbar-links.dropdown {
+    position: relative;
+    top: calc(100% + .25rem)
+  }
+  
+  .dropdown-link {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    top: 100%;
+    left: 0;
+
+  } */
+  
+  /* Initially hide the dropdown menu 
+  .app__navbar-dropdown {
+    position: absolute;
+    display: none; 
+    flex-direction: column;
+    background-color: var(--color-grey);
+    border: 1px solid #fff;
+    z-index: 1;
+    text-decoration: none;
+  }
+  
+  .dropdown-link a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.25rem;
+  }
+  
+  
+  .app__navbar-dropdown:hover {
+    background-color: var(--color-white);
+    
+  }
+  */
+   /* Show the dropdown menu on hover 
+  .dropdown:hover .app__navbar-dropdown{
+    display: flex;
+    margin-top: 2rem;
+  }
+  */
+  
+  .dropdown-link {
+    background: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0;
+
+  }
+
+  .dropdown-link:hover {
+    
+    color:aquamarine;
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-menu{
+    position: absolute;
+    top: 100%;
+    background-color: var(--color-gray);
+    
+  }
+  .p__opensans.dropdown-text {
+    text-decoration: none;
+  }
+
 
 .app__navbar-login {
     display: flex;

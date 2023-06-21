@@ -4,23 +4,31 @@ import { MdOutlineSportsSoccer } from "react-icons/md";
 import { Link } from "react-router-dom"
 import images from "../../constants/images";
 
-import Program from "../../views/Program/Program"
-
 
 import "./Navbar.css";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen)
+  }
 
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
         <img src={images.logo} alt="app logo" />
       </div>
-      <ul className="app__navbar-links">
+      <ul className="app__navbar-links dropdown" onMouseLeave={() => setIsOpen(false)}>
         <li className="p__opensans"> <Link to="/"> Home </Link> </li>
-        <li className="p__opensans"> <Link to="/programs"> Programs </Link></li>
-        
+        <li className="p__opensans dropdown-link" onMouseEnter={toggleDropdown}> <Link to="/programs"> Programs </Link>
+          {isOpen && (
+          <ul className="dropdown-menu">
+              <li className="p__opensans dropdown-text"> <Link to="/competitive"> Competitive</Link> </li>
+        </ul >
+        )}
+        </li>
         <li className="p__opensans"> <Link to="/resources"> Resources </Link> </li>
         <li className="p__opensans"> <Link to="/coaching"> Coaching</Link></li>
       </ul>
@@ -37,6 +45,9 @@ const Navbar = () => {
             <ul className="app__navbar-smallscreen_links">
               <li className="p__opensans"> <Link to="/"> Home </Link> </li>
               <li className="p__opensans"> <Link to="/programs"> Programs </Link></li>
+              <ul className="app__navbar-smallscreen_links">  
+                <li className="p__opensans"> <Link to="/competitive"> Competitive </Link> </li>
+              </ul>
               <li className="p__opensans"> <Link to="/resources"> Resources </Link> </li>
               <li className="p__opensans"> <Link to="/coaching"> Coaching</Link></li>
             </ul>

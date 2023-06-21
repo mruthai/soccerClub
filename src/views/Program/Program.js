@@ -3,6 +3,7 @@ import './Program.css'
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../container/Footer/Footer'
 import { images } from '../../constants'
+import React from 'react'
 
 const Program = () => {
   return (
