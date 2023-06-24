@@ -6,6 +6,7 @@ import Program from './views/Program/Program';
 import Resources from './views/Resources/Resources';
 import Coaching from './views/Coaching/Coaching';
 import Competitive from './views/Competitive/Competitive'
+import Recreation from './views/Recreation/Recreation';
 
 
 
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/resources" element={<Resources />} />
         <Route path="/coaching" element={<Coaching />} />
         <Route path="/competitive" element={<Competitive />} />
+        <Route path="/recreation" element={<Recreation />} />
       </Routes>
       
   );

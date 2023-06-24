@@ -9,15 +9,18 @@ const Competitive = () => {
   return (
     <div>
     <Navbar />
-    <div className="app__competitive app__wrapper section__padding" id="competitive">
+    <div className="app__competitive section__padding" id="competitive">
       <div className="app__competitive-content">
-        <h1>Competitive</h1>
+        <h1 className="headtext__playfair text__competitive flex__center">Competitive</h1>
       </div>
-      <div className="app__wrapper_img">
-
+      <div className="headtext__playfair text__competitive">
+        <p className="p__opensans">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Enim consequatur aspernatur unde, voluptatibus beatae non porro libero odit perspiciatis 
+        sint deserunt architecto ullam dolorum? Ad porro magni perspiciatis expedita blanditiis voluptas, 
+        nesciunt voluptatem ea quaerat voluptate sapiente rerum hic vitae!</p>
       </div>
-      <Footer />
     </div>
+      <Footer />
   </div>
   )
 }

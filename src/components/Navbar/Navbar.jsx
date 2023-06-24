@@ -24,10 +24,11 @@ const Navbar = () => {
         <li className="p__opensans"> <Link to="/"> Home </Link> </li>
         <li className="p__opensans dropdown-link" onMouseEnter={toggleDropdown}> <Link to="/programs"> Programs </Link>
           {isOpen && (
-          <ul className="dropdown-menu">
+            <ul className="dropdown-menu">
               <li className="p__opensans dropdown-text"> <Link to="/competitive"> Competitive</Link> </li>
-        </ul >
-        )}
+              <li className="p__opensans dropdown-text"> <Link to="/recreation"> Recreation</Link> </li>
+            </ul >
+          )}
         </li>
         <li className="p__opensans"> <Link to="/resources"> Resources </Link> </li>
         <li className="p__opensans"> <Link to="/coaching"> Coaching</Link></li>
@@ -45,8 +46,9 @@ const Navbar = () => {
             <ul className="app__navbar-smallscreen_links">
               <li className="p__opensans"> <Link to="/"> Home </Link> </li>
               <li className="p__opensans"> <Link to="/programs"> Programs </Link></li>
-              <ul className="app__navbar-smallscreen_links">  
+              <ul className="app__navbar-smallscreen_links">
                 <li className="p__opensans"> <Link to="/competitive"> Competitive </Link> </li>
+                <li className="p__opensans dropdown-text"> <Link to="/recreation"> Recreation</Link> </li>
               </ul>
               <li className="p__opensans"> <Link to="/resources"> Resources </Link> </li>
               <li className="p__opensans"> <Link to="/coaching"> Coaching</Link></li>

@@ -84,7 +84,6 @@ dropdwon menu
   .dropdown-link {
     background: none;
     border: none;
-    text-decoration: none;
     cursor: pointer;
     padding: 0;
 
@@ -92,7 +91,7 @@ dropdwon menu
 
   .dropdown-link:hover {
     
-    color:aquamarine;
+    color: lime;
   }
 
   .dropdown {
@@ -102,13 +101,14 @@ dropdwon menu
   .dropdown-menu{
     position: absolute;
     top: 100%;
-    background-color: var(--color-gray);
+    padding: 0;
+    margin: 0;
     
   }
-  .p__opensans.dropdown-text {
-    text-decoration: none;
+  .p__opensans.dropdown-text{
+    color: var(--color-white);
+    list-style-type: none;
   }
-
 
 .app__navbar-login {
     display: flex;
