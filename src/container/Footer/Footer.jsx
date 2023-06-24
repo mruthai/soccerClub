@@ -2,6 +2,7 @@ import React from 'react';
 import { images } from '../../constants'
 import './Footer.css';
 import { FiFacebook } from 'react-icons/fi';
+
 const Footer = () => (
   <div className="app__footer section__padding">
     <h1>footer</h1>

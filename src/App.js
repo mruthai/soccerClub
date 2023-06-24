@@ -8,7 +8,8 @@ import Coaching from './views/Coaching/Coaching';
 import Competitive from './views/Competitive/Competitive'
 import Recreation from './views/Recreation/Recreation';
 
-
+// routes provides path ways to all the children pages of the project
+// The browswerrouter is wrapped around the App function through initialization of the index. 
 
 
 const App = () => {

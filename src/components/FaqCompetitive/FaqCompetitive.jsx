@@ -1,6 +1,7 @@
 import React from 'react'
 import './FaqCompetitive.css'
 
+// show case FAQ question and answer sending it resources
 const FaqCompetitive = ({faq, index, toggleFaq}) => {
 
 

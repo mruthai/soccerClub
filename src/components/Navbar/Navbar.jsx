@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { MdOutlineSportsSoccer } from "react-icons/md";
+import { GiHamburgerMenu } from "react-icons/gi"; /* import icons react library */
+import { MdOutlineSportsSoccer } from "react-icons/md"; /* import icons react library */
 import { Link } from "react-router-dom"
 import images from "../../constants/images";
 
 
 import "./Navbar.css";
 
+// Hooks for viewing menu drop down and viewing the menu on small screen. 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false)
   const [isOpen, setIsOpen] = useState(false)

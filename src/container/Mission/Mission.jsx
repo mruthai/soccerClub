@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Mission.css";
+
 const Mission = () => {
   return (
     <div className="app__mission-content flex__center app__bg section__padding"  id="mission">

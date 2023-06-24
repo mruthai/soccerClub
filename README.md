@@ -1,4 +1,17 @@
-# Getting Started with Create React App
+<!-- Documentation -->
+ 
+ src folder:
+
+ assets folder: houses all the images in the project
+ components folder: Major components at are used across multiple modules
+ constants folder: modules to deploy images into different modules
+ container folder: houses all the modules predominantly and it's components used for the home page minus the footer module/component 
+ views folder: houses all the children pages of the project
+
+ The application is a simple website that showcases a starting soccer/football club in one's local area. The goal of the site is to give access to members to the site to pay for kits or give to the club. House coaching documents as well. It's an overall base model. 
+
+
+# React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,3 +81,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
