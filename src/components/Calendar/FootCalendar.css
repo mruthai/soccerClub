@@ -1,0 +1,74 @@
+/* calendar.css */
+
+/* Style for the main container of the calendar component */
+.react-calendar {
+    width: 100%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style for the calendar navigation (header) */
+  .react-calendar__navigation {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  /* Style for the calendar navigation buttons */
+  .react-calendar__navigation__arrow {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Style for the calendar days (cells) */
+  .react-calendar__tile {
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Style for the selected day */
+  .react-calendar__tile--active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Style for the calendar tile with events */
+  .react-calendar__tile--hasActive {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  /* Style for the day names (e.g., Sun, Mon, Tue) */
+  .react-calendar__month-view__weekdays__weekday {
+    background-color: #f0f0f0;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  /* Style for the current month name */
+  .react-calendar__month-view__days__day--neighboringMonth {
+    color: #aaa;
+  }
+
+  .event-marker {
+    width: 8px;
+    height: 8px;
+    background-color: #28a745;
+    border-radius: 50%;
+    margin: 0 auto;
+    color: black;
+  }
+  
+  /* .event-tile-label {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+  } */

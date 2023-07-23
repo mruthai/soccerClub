@@ -2,7 +2,7 @@ import React from 'react'
 import './FaqCompetitive.css'
 
 // show case FAQ question and answer sending it resources
-const FaqCompetitive = ({faq, index, toggleFaq}) => {
+const FaqCompetitive = ({ faq, index, toggleFaq }) => {
 
 
     return (
@@ -12,10 +12,10 @@ const FaqCompetitive = ({faq, index, toggleFaq}) => {
             onClick={() => toggleFaq(index)}
         >
             <div className="app__faq-question">
-            <h3 className="h3__opensans">{faq.question}</h3>
+                <h3 className="h3__opensans">{faq.question}</h3>
             </div>
             <div className="app__faq-answer">
-            <h4 className="h4__opensans">{faq.answer}</h4>
+                <h4 className="h4__opensans">{faq.answer}</h4>
             </div>
 
         </div>

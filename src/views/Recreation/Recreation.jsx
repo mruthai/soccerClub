@@ -2,6 +2,7 @@ import React from 'react'
 import './Recreation.css'
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../container/Footer/Footer'
+import FootCalendar from '../../components/Calendar/FootCalendar'
 
 const Recreation = () => {
   return (
@@ -16,7 +17,9 @@ const Recreation = () => {
         sint deserunt architecto ullam dolorum? Ad porro magni perspiciatis expedita blanditiis voluptas, 
         nesciunt voluptatem ea quaerat voluptate sapiente rerum hic vitae!</p>
         </div>
-
+      <FootCalendar
+      events=''
+      />
       </div>
       <Footer />
     </div>
