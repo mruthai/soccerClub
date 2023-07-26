@@ -3,6 +3,7 @@ import Calendar from 'react-calendar'
 import {useState} from 'react'
 import 'react-calendar/dist/Calendar.css';
 import './FootCalendar.css'
+import { startOfWeek } from 'date-fns';
 
 const FootCalendar = () => {
     const [selectedDate, setSelectedDate] = useState(new Date());
@@ -34,6 +35,8 @@ const FootCalendar = () => {
         },
     ]
 
+    const customValue = startOfWeek(selectedDate, { weekStartsOn: 0 });
+
     const handleDateChange = (date) => {
       setSelectedDate(date);
     };
@@ -50,7 +53,8 @@ const FootCalendar = () => {
       const tileContent = ({ date, view }) => {
         if (view === 'month') {
           const eventTitles = getEventTitlesForDate(date);
-          return eventTitles.length > 0 ? <div className="event-tile-label">{eventTitles.join(', ')}</div> : null;
+          return eventTitles.length > 0 ? <div className="event-tile-label">{eventTitles.join(', ')}
+          </div> : null;
         } else {
           return null;
         }
@@ -62,14 +66,16 @@ const FootCalendar = () => {
 
   return (
     <div>
-        <h1>My Calendar</h1>
+        <h1>Rec Calendar</h1>
     <Calendar
+      startAt="sunday"
       onChange={handleDateChange}
       value={selectedDate}
       tileContent={tileContent}
     
     />
-    <p>Selected Date: {selectedDate.toDateString()}</p></div>
+    {/* <p>Selected Date: {selectedDate.toDateString()}</p> */}
+    </div>
   )
 }
 

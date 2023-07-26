@@ -19,6 +19,7 @@ const Recreation = () => {
         </div>
       <FootCalendar
       events=''
+      startAt='Sunday'
       />
       </div>
       <Footer />
