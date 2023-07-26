@@ -1,0 +1,11 @@
+/* calendar.css */
+
+.custom-calendar {
+    background-color: blueviolet;
+  }
+  
+  /* Optionally, you can also highlight the weekends in a different color */
+  .custom-calendar .CalendarDay__weekend {
+    background-color: #f0f0f0;
+  }
+  

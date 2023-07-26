@@ -2,6 +2,7 @@ import React from 'react'
 import FaqCompetitive from '../../components/FaqCompetitive/FaqCompetitive'
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../container/Footer/Footer'
+import SoccerCalendar from '../../components/Calendar/SoccerCalendar'
 import './Resources.css'
 import { images } from "../../constants";
 import { useState } from "react";
@@ -47,6 +48,9 @@ const Resources = () => {
       <Navbar />
       <div className="app__resources-title flex__center section_padding">
         <h1 className="headtext__playfair text__resources">Resources</h1>
+      </div >
+      <div className="flex__center">
+      <SoccerCalendar />
       </div>
       <div className="app__resources-content section__padding" >
         <div className="app__resources-competitive ">

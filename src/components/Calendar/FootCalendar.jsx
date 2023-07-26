@@ -3,7 +3,7 @@ import Calendar from 'react-calendar'
 import {useState} from 'react'
 import 'react-calendar/dist/Calendar.css';
 import './FootCalendar.css'
-import { startOfWeek } from 'date-fns';
+import  startOfWeek  from 'date-fns/startOfWeek';
 
 const FootCalendar = () => {
     const [selectedDate, setSelectedDate] = useState(new Date());
@@ -68,11 +68,12 @@ const FootCalendar = () => {
     <div>
         <h1>Rec Calendar</h1>
     <Calendar
-      startAt="sunday"
+      setSelectedDate={customValue}
       onChange={handleDateChange}
-      value={selectedDate}
+      value={customValue}
+      defaultValue={selectedDate}
       tileContent={tileContent}
-    
+      
     />
     {/* <p>Selected Date: {selectedDate.toDateString()}</p> */}
     </div>
