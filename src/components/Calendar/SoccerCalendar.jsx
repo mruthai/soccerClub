@@ -15,8 +15,8 @@ const SoccerCalendar = () => {
     },
     {
       title: 'Event 2',
-      start: new Date(2023, 8, 25, 14, 30),
-      end: new Date(2023, 8, 25, 16, 0),
+      start: new Date(2023, 8, 9, 8, 0),
+      end: new Date(2023, 8, 9, 9, 0),
     },
   ];
 
@@ -29,7 +29,7 @@ const SoccerCalendar = () => {
 
   return (
     <div>
-      <h1>Scheduling Calendar</h1>
+      <h1 className="headertext__playfair">Scheduling Calendar</h1>
       < Calendar
         localizer={localizer}
         events={events}
