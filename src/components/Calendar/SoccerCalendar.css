@@ -9,3 +9,76 @@
     background-color: #f0f0f0;
   }
   
+  /* calendar.css */
+
+/* Style for the entire calendar container */
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Style for the calendar title */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.rbc-btn-group {
+  background-color: black;
+}
+
+/* Style for the calendar */
+.rbc-calendar {
+  width: 100%;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rbc-header {
+  color: #f0f0f0;
+}
+
+/* Style for the event container */
+.rbc-event {
+  background-color: #007bff;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 14px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+/* Style for the event tooltip */
+.rbc-event-tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  z-index: 100;
+}
+
+/* Style for the event creation tooltip */
+.rbc-event-creation-tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+/* Style for the selected slot (time range) */
+.rbc-selected-slot {
+  background-color: rgba(0, 123, 255, 0.3);
+  border: 1px solid #007bff;
+  border-radius: 3px;
+  cursor: pointer;
+}

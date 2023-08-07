@@ -3,14 +3,14 @@ import Calendar from 'react-calendar'
 import {useState} from 'react'
 import 'react-calendar/dist/Calendar.css';
 import './FootCalendar.css'
-import  startOfWeek  from 'date-fns/startOfWeek';
+
 
 const FootCalendar = () => {
     const [selectedDate, setSelectedDate] = useState(new Date());
 
     const events = [
         {
-            date: new Date(2023, 8, 2),
+            date: new Date(2023, 8, 2, 8, 0),
             title: 'Recreation Game 1',
         },
         {
@@ -31,51 +31,57 @@ const FootCalendar = () => {
         },
         {
             date: new Date(2023, 9, 7),
-            title: 'Recreation Game 7',
+            title: 'Recreation Game 6',
         },
     ]
 
-    const customValue = startOfWeek(selectedDate, { weekStartsOn: 0 });
+    
 
     const handleDateChange = (date) => {
       setSelectedDate(date);
     };
 
-    const getEventTitlesForDate = (date) => {
-      return events
-        .filter((event) => event.date.toDateString() === date.toDateString())
-        .map((event) => event.title);
-  
-     
-    };
-    
-      // Custom tile content renderer
-      const tileContent = ({ date, view }) => {
-        if (view === 'month') {
-          const eventTitles = getEventTitlesForDate(date);
-          return eventTitles.length > 0 ? <div className="event-tile-label">{eventTitles.join(', ')}
-          </div> : null;
-        } else {
-          return null;
-        }
-      };
+      // Function to render event titles and times for a given date
+  const renderEventsForDate = (date) => {
+    const eventInfo = events
+      .filter((event) => event.date.toDateString() === date.toDateString())
+      .map((event, index) => (
+        <div key={index}>
+          <p style={{color: 'black'}}>{event.title}</p>
+          <p>{event.date.toLocaleDateString()} -{' '}
+            {event.date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+          
+          </p>
+        </div>
+      ));
 
-    const hasEvent = (date) => {
-        return events.some((event) => event.date.toDateString() === date.toDateString());
-      };
+    return eventInfo.length > 0 ? <div className="event-info">{eventInfo}</div> : null;
+  };
+
+  // Custom tile content renderer
+  const tileContent = ({ date, view }) => {
+    if (view === 'month') {
+      return null;
+    } else {
+      return renderEventsForDate(date);
+    }
+  };
+
+
+ 
 
   return (
     <div>
         <h1>Rec Calendar</h1>
     <Calendar
-      setSelectedDate={customValue}
+      
       onChange={handleDateChange}
-      value={customValue}
-      defaultValue={selectedDate}
+     
+      value={selectedDate}
       tileContent={tileContent}
       
     />
-    {/* <p>Selected Date: {selectedDate.toDateString()}</p> */}
+    <p>Selected Date: {selectedDate.toDateString()}</p>
     </div>
   )
 }

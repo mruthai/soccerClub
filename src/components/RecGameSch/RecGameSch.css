@@ -1,0 +1,35 @@
+.game__schedule {
+font-family: Arial, sans-serif;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.match__day {
+    list-style-type: none;
+  padding: 0;
+}
+
+.match__day-who {
+    margin-bottom: 8px;
+    padding: 4px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.match__day-who::before {
+    content: 'Match: ';
+    font-weight: bold;
+}
+
+.match__day-who span {
+    font-weight: bold;
+}
+
+@media screen {
+    .game__schedule {
+        font-size: 14 px;
+    }
+}

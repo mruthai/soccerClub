@@ -1,32 +1,48 @@
-import React from 'react'
-import {useState} from 'react'
-import DatePicker from 'react-modern-calendar-datepicker'
-import 'react-modern-calendar-datepicker/lib/DatePicker.css'
-import'./SoccerCalendar.css'
+import { useState } from 'react';
+import { Calendar, momentLocalizer } from 'react-big-calendar';
+import 'react-big-calendar/lib/css/react-big-calendar.css';
+import moment from 'moment';
+import './SoccerCalendar'; // Import the custom CSS file
+
+const localizer = momentLocalizer(moment);
 
 const SoccerCalendar = () => {
-    const [selectedDate, setSelectedDate] = useState(null);
+  const events = [
+    {
+      title: 'Game1',
+      start: new Date(2023, 8, 2, 10, 0),
+      end: new Date(2023, 8, 2, 12, 0),
+    },
+    {
+      title: 'Event 2',
+      start: new Date(2023, 8, 25, 14, 30),
+      end: new Date(2023, 8, 25, 16, 0),
+    },
+  ];
 
-    const handleDateChange = (date) => {
-      setSelectedDate(date);
-    };
-  
-    return (
-      <div>
-        <h1>My Calendar</h1>
-        <DatePicker
-          value={selectedDate}
-          onChange={handleDateChange}
-          shouldHighlightWeekends // Add this prop to highlight weekends (optional)
-          calendarClassName="custom-calendar" // Custom class for styling (optional)
-          locale="en" // Set the locale (optional, default is "en")
-          weekStartDay={0} // Set Sunday as the first day of the week (0 for Sunday, 1 for Monday, etc.)
-        />
-        {selectedDate && (
-          <p>Selected Date: {selectedDate.day}/{selectedDate.month}/{selectedDate.year}</p>
-        )}
-      </div>
-    );
-  };
+  // const handleSelect = ({ start, end }) => {
+  //   const title = window.prompt('Enter event title:');
+  //   if (title) {
+  //     setEvents([...events, { title, start, end }]);
+  //   }
+  // };
 
+  return (
+    <div>
+      <h1>Scheduling Calendar</h1>
+      < Calendar
+        localizer={localizer}
+        events={events}
+        startAccessor="start"
+        endAccessor="end"
+        selectable
+        // onSelectSlot={handleSelect}
+        style={{ height: 500 }} // Set the height of the calendar
+      />
+    </div>
+  );
+};
 export default SoccerCalendar
+
+
+

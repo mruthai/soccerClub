@@ -62,7 +62,7 @@
     color: black;
   }
   
-  /* .event-tile-label {
+  .event-info {
     background-color: #007bff;
     color: #fff;
     font-size: 12px;
@@ -71,4 +71,4 @@
     position: absolute;
     top: 4px;
     right: 4px;
-  } */
+  }

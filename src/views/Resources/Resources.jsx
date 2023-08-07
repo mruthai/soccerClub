@@ -49,7 +49,7 @@ const Resources = () => {
       <div className="app__resources-title flex__center section_padding">
         <h1 className="headtext__playfair text__resources">Resources</h1>
       </div >
-      <div className="flex__center">
+      <div className="soccer__calender flex__center">
       <SoccerCalendar />
       </div>
       <div className="app__resources-content section__padding" >
