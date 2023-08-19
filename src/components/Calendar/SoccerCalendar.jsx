@@ -20,12 +20,7 @@ const SoccerCalendar = () => {
     },
   ];
 
-  // const handleSelect = ({ start, end }) => {
-  //   const title = window.prompt('Enter event title:');
-  //   if (title) {
-  //     setEvents([...events, { title, start, end }]);
-  //   }
-  // };
+
 
   return (
     <div>
@@ -36,7 +31,7 @@ const SoccerCalendar = () => {
         startAccessor="start"
         endAccessor="end"
         selectable
-        // onSelectSlot={handleSelect}
+        
         style={{ height: 500 }} // Set the height of the calendar
       />
     </div>

@@ -54,6 +54,7 @@ margin-bottom: 20px;
 
 }
 
+
 /* Change the color of the next and previous month navigation buttons */
 .rbc-btn-group > button {
 background-color: black; /* Change to your desired color */
@@ -65,11 +66,14 @@ background-color: red; /* Change to your desired hover color */
 color: #fff; /* Change to your desired hover color */
 }
 
+.rbc-day-bg.rbc-today {
+  background-color: crimson;
+}
 
 /* Style for the calendar */
 .rbc-calendar {
 width: 100%;
-background-color: (241, 60, 60);
+background-color: #ccc;
 border: 1px solid #ccc;
 border-radius: 5px;
 padding: 20px;
@@ -77,7 +81,7 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .rbc-header {
-color: #f0f0f0;
+color: black;
 }
 
 /* Style for the event container */
@@ -158,26 +162,8 @@ cursor: pointer;
     }
   }
 
-  @media (max-width: 768px) {
-    .rbc-calendar {
-      font-size: 14px;
-      padding: 10px;
-    }
-    .rbc-header {
-      font-size: 14px;
-      padding: 5px;
-    }
-    .rbc-today {
-      font-size: 14px;
-      padding: 5px;
-    }
-    .rbc-event {
-      font-size: 12px;
-      padding: 2px;
-    }
-    /* Adjust other styles as needed */
-  }
-  @media (max-width: 350px) {
+
+@media (max-width: 350px) {
     .rbc-calendar {
       font-size: 14px;
       padding: 10px;

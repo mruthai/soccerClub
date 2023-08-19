@@ -3,9 +3,22 @@ import './Recreation.css'
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../container/Footer/Footer'
 import FootCalendar from '../../components/Calendar/FootCalendar'
-import RecGameSch from '../../components/RecGameSch/RecGameSch'
+import League from '../../components/League/League'
+
+import 'react-tabs/style/react-tabs.css';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 const Recreation = () => {
+  
+
+
+  const scheduleData = [
+    { time: '8 AM', homeTeam: 'Team A', awayTeam: 'Team B' },
+    { time: '9 AM', homeTeam: 'Team C', awayTeam: 'Team D' },
+    { time: '11 AM', homeTeam: 'Team E', awayTeam: 'Team F' },
+    // ... more game objects
+  ];
+
   return (
     <div className="app__recreation">
       <Navbar />
@@ -19,8 +32,40 @@ const Recreation = () => {
         nesciunt voluptatem ea quaerat voluptate sapiente rerum hic vitae!</p>
         </div>
         <div>
-          <RecGameSch />
-        </div>
+      <h1>League Schedule App</h1>
+      <Tabs>
+        <TabList>
+          <Tab>Home</Tab>
+          <Tab>U6</Tab>
+          <Tab>U8</Tab>
+          <Tab>U9</Tab>
+          <Tab>U10</Tab>
+          {/* Add more tabs as needed */}
+        </TabList>
+
+        <TabPanel>
+          {/* Content for the Home tab */}
+          <p>Welcome to the League Schedule App!</p>
+        </TabPanel>
+        <TabPanel>
+          {/* Content for the Schedule tab */}
+          <League leagueName="Week1" gameDay="September 9th 2023" scheduleName={scheduleData} />
+          <br></br>
+          <League leagueName="Week2" gameDay="September 9th 2023" scheduleName={scheduleData} />
+        </TabPanel>
+        <TabPanel>
+          {/* Content for the Schedule tab */}
+          <League leagueName="Week1" gameDay="September 9th 2023" scheduleName={scheduleData} />
+          <p>laksjdlfkja;skdjf</p>
+        </TabPanel>
+        <TabPanel>
+          {/* Content for the Schedule tab */}
+          <League leagueName="Week1" gameDay="September 9th 2023" scheduleName={scheduleData} />
+          <p>laksjdlfkja;skdjf</p>
+        </TabPanel>
+   
+      </Tabs>
+    </div>
         <div>
       <FootCalendar
       events=''
